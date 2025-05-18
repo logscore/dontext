@@ -22,7 +22,31 @@ server.tool(
       // Prepare the request payload
       const payload = {
         url,
-        formats: ['markdown']
+        formats: ['markdown'],
+        excludeTags: [
+          'header',
+          'footer',
+          'nav',
+          'aside',
+          '.sidebar',
+          '.ads',
+          '.sponsored',
+          'img',
+          'video',
+          'audio',
+          'iframe',
+          '.related-posts',
+          '.comments',
+          '.popup',
+          '.modal',
+          '.newsletter',
+          '.cookie-banner',
+          '.breadcrumb',
+          '.pagination',
+          '.share-buttons',
+          '.hero',
+          '.carousel'
+        ],
       };
       
       // Make the API request to the crawler
